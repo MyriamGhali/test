@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>F1 Update · Grooming × Audi Revolut F1® Team</title>
+<style>
+    :root {
+      --navy: #001E60;
+      --navy-deep: #0A1636;
+      --lava: #FF2D00;
+      --chalk: #F5F2F2;
+      --ink: #14151A;
+      --muted: #6B7280;
+      --line: #E6E8EF;
+      --font: 'Futura Std', 'Avenir Next', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font);
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .grouphead {
+      text-align: center;
+      padding: 50px 0 4px;
+    }
+
+    .grouphead h2 {
+      display: inline-block;
+      font-size: clamp(24px, 4.4vw, 34px);
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: -0.4px;
+      margin: 0;
+    }
+
+    .grouphead h2:after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 4px;
+      background: var(--lava);
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    .grouphead+.model,
+    .grouphead+.lite {
+      border-top: none;
+      margin-top: 14px;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      height: min(94vh, 760px);
+      min-height: 480px;
+      overflow: hidden;
+      background: var(--navy-deep);
+    }
+
+    .hero video,
+    .hero .poster {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero .scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 22, 54, .35) 0%, rgba(10, 22, 54, .10) 38%, rgba(10, 22, 54, .78) 100%);
+    }
+
+    .hero .classify {
+      position: absolute;
+      top: 22px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #fff;
+      opacity: .85;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .hero-inner {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 0 28px 44px;
+    }
+
+    .hero-inner .max {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .kicker {
+      display: inline-block;
+      color: #fff;
+      background: var(--lava);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 7px 13px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      color: #fff;
+      margin: 0 0 10px;
+      font-size: clamp(30px, 6vw, 54px);
+      line-height: 1.04;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 24px rgba(0, 0, 0, .35);
+    }
+
+    .hero .sub {
+      color: #EAECF5;
+      margin: 0;
+      max-width: 620px;
+      font-size: clamp(15px, 2.4vw, 19px);
+      font-weight: 500;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, .4);
+    }
+
+    .sound-tip {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 18px;
+      color: #fff;
+      opacity: .8;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .3px;
+    }
+
+    .sound-tip .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--lava);
+      display: inline-block;
+    }
+
+    .soundbtn {
+      position: absolute;
+      right: 20px;
+      bottom: 22px;
+      z-index: 5;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border: 1px solid rgba(255, 255, 255, .35);
+      border-radius: 999px;
+      background: rgba(10, 22, 54, .55);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      color: #fff;
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .3px;
+      cursor: pointer;
+      transition: background .2s ease, transform .2s ease;
+    }
+
+    .soundbtn:hover {
+      background: var(--lava);
+      transform: translateY(-1px);
+    }
+
+    .soundbtn svg {
+      width: 16px;
+      height: 16px;
+      display: block;
+    }
+
+    /* ---------- GREETING / INTRO ---------- */
+    .intro {
+      padding: 54px 0 8px;
+    }
+
+    .greet {
+      font-size: clamp(18px, 2.4vw, 22px);
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0 0 16px;
+    }
+
+    .intro p {
+      font-size: clamp(16.5px, 2.1vw, 21px);
+      color: #2B2F3A;
+      margin: 0 auto;
+      max-width: 760px;
+    }
+
+    .intro p strong {
+      color: var(--navy);
+    }
+
+    /* ---------- RESULTS BANNER ---------- */
+    .results {
+      padding: 40px 0 10px;
+    }
+
+    .eyebrow {
+      text-align: center;
+      color: var(--lava);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+    }
+
+    .results h2 {
+      text-align: center;
+      color: var(--navy);
+      margin: 0 0 6px;
+      font-size: clamp(24px, 4.4vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.4px;
+    }
+
+    .results .lede {
+      text-align: center;
+      color: var(--muted);
+      max-width: 680px;
+      margin: 0 auto 30px;
+      font-size: 16px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: linear-gradient(170deg, #ffffff 0%, #F7F8FC 100%);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 26px 22px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(16, 24, 64, .06);
+    }
+
+    .card .mkt {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .card .big {
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .card .label {
+      font-size: 13px;
+      color: #3A3F4C;
+      margin-top: 9px;
+      font-weight: 600;
+    }
+
+    .card.placeholder {
+      border-style: dashed;
+    }
+
+    .card .pill {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      color: var(--lava);
+      background: #FFF0EC;
+      padding: 3px 9px;
+      border-radius: 20px;
+    }
+
+    /* ---------- MODEL MARKET SECTIONS ---------- */
+    .model {
+      padding: 52px 0;
+      border-top: 1px solid var(--line);
+      margin-top: 48px;
+    }
+
+    .model:first-of-type {
+      border-top: none;
+      margin-top: 10px;
+    }
+
+    .tag {
+      display: inline-block;
+      color: var(--lava);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .model h3 {
+      color: var(--navy);
+      font-size: clamp(24px, 4.6vw, 32px);
+      font-weight: 800;
+      margin: 0 0 6px;
+      letter-spacing: -0.4px;
+    }
+
+    .model .result-line {
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 2px 0 20px;
+    }
+
+    .model .result-line b {
+      color: var(--lava);
+    }
+
+    .model p {
+      font-size: 16.5px;
+      color: #333945;
+      margin: 0 0 16px;
+    }
+
+    .model p strong {
+      color: var(--navy);
+    }
+
+    .mediaframe {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 16px 44px rgba(16, 24, 64, .14);
+      margin: 24px 0 8px;
+      background: #000;
+    }
+
+    .mediaframe video {
+      width: 100%;
+      display: block;
+    }
+
+    .cap {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 10px 2px 0;
+      text-align: center;
+    }
+
+    .imgrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 22px 0 6px;
+    }
+
+    .imgrid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin: 22px 0 6px;
+    }
+
+    .imgrid img,
+    .imgrid-2 img,
+    .imgrid-3 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      aspect-ratio: 3/4;
+    }
+
+    .imgrid-2.raw {
+      align-items: start;
+    }
+
+    .imgrid-2.raw img {
+      height: auto;
+      aspect-ratio: auto;
+      object-fit: contain;
+    }
+
+    .imgrid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin: 22px 0 6px;
+    }
+
+    .wideimg {
+      width: 100%;
+      border-radius: 14px;
+      display: block;
+      margin: 20px 0 6px;
+      box-shadow: 0 12px 34px rgba(16, 24, 64, .10);
+    }
+
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 18px 0 6px;
+    }
+
+    .pair img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      box-shadow: 0 10px 28px rgba(16, 24, 64, .10);
+    }
+
+    .factstrip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 24px 0;
+    }
+
+    .fact {
+      background: var(--chalk);
+      border-radius: 12px;
+      padding: 16px 10px;
+      text-align: center;
+    }
+
+    .fact .n {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .fact .t {
+      font-size: 10.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-top: 6px;
+      font-weight: 700;
+    }
+
+    .note {
+      background: #FFF8E8;
+      border-left: 4px solid #E7A600;
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #6B5600;
+      margin: 18px 0;
+    }
+
+    /* ---------- MORE / FULL PICTURE ---------- */
+    .morebar {
+      background: var(--navy);
+      padding: 40px 0;
+      margin-top: 54px;
+    }
+
+    .morebar h4 {
+      text-align: center;
+      color: #fff;
+      font-size: clamp(22px, 3.6vw, 28px);
+      font-weight: 800;
+      margin: 0 0 8px;
+      letter-spacing: -0.3px;
+    }
+
+    .morebar p {
+      text-align: center;
+      color: #C6CBDF;
+      max-width: 660px;
+      margin: 0 auto;
+      font-size: 15px;
+    }
+
+    .lite {
+      padding: 38px 0 4px;
+      border-top: 1px solid var(--line);
+    }
+
+    .lite:first-of-type {
+      margin-top: 40px;
+    }
+
+    .lite .tag {
+      display: inline-block;
+      color: var(--lava);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .lite h4 {
+      color: var(--navy);
+      font-size: clamp(20px, 3.2vw, 25px);
+      font-weight: 800;
+      margin: 0 0 12px;
+      letter-spacing: -0.3px;
+    }
+
+    .lite p {
+      font-size: 15.5px;
+      color: #3A404C;
+      margin: 0 0 14px;
+    }
+
+    .lite p strong {
+      color: var(--navy);
+    }
+
+    .subhead {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--lava);
+      margin: 28px 0 2px;
+    }
+
+    .lite h5 {
+      font-size: 17.5px;
+      color: var(--navy);
+      font-weight: 800;
+      margin: 0 0 8px;
+    }
+
+    .statband {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      background: var(--navy);
+      border-radius: 14px;
+      overflow: hidden;
+      margin: 18px 0;
+    }
+
+    .statband .s {
+      background: var(--navy);
+      padding: 20px 12px;
+      text-align: center;
+    }
+
+    .statband .s .n {
+      font-size: clamp(22px, 4vw, 28px);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+    }
+
+    .statband .s .t {
+      font-size: 10.5px;
+      color: #AEB6D4;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+      margin-top: 7px;
+      font-weight: 700;
+    }
+
+    .callout {
+      background: var(--chalk);
+      border-left: 4px solid var(--lava);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    .callout .h {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 7px;
+    }
+
+    .callout .b {
+      font-size: 14.5px;
+      color: #3A404C;
+      line-height: 1.6;
+    }
+
+    .callout .b strong {
+      color: var(--navy);
+    }
+
+    .phones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin: 18px 0 6px;
+    }
+
+    .phones a,
+    .phones .pz {
+      display: block;
+      width: 215px;
+      max-width: 31%;
+    }
+
+    .phones.lg a,
+    .phones.lg .pz {
+      width: 215px;
+      max-width: 31%;
+    }
+
+    .phones img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .phones .pcap {
+      font-size: 11px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 7px;
+      font-weight: 600;
+    }
+
+    .shots {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 16px 0 6px;
+    }
+
+    .shots.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .shots img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .landscape {
+      position: relative;
+      max-width: 440px;
+      margin: 16px auto 6px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(16, 24, 64, .10);
+    }
+
+    .landscape img {
+      width: 100%;
+      display: block;
+    }
+
+    .mevvis {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      align-items: flex-end;
+      margin: 20px 0 6px;
+    }
+
+    .mevvis .car {
+      width: 380px;
+      max-width: 100%;
+    }
+
+    .mevvis .collar {
+      width: 210px;
+      max-width: 46%;
+    }
+
+    .mevvis a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .mevvis .car img {
+      width: 100%;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 10px 28px rgba(16, 24, 64, .10);
+    }
+
+    .mevvis .collar img {
+      width: 100%;
+      display: block;
+    }
+
+    .mevvis .mcap {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 9px;
+      font-weight: 600;
+    }
+
+    .gallabel {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-align: center;
+      margin: 24px 0 2px;
+    }
+
+    .gal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      margin: 14px 0 6px;
+    }
+
+    .galitem {
+      width: 215px;
+      max-width: 31%;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .galitem img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    .galitem.mock img {
+      border-radius: 0;
+    }
+
+    .galitem .mcap {
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    .racegrid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 8px 0;
+    }
+
+    .racecard .rc-tag {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--lava);
+      margin-bottom: 6px;
+    }
+
+    .racecard h5 {
+      font-size: 17px;
+      color: var(--navy);
+      font-weight: 800;
+      margin: 0 0 8px;
+    }
+
+    .racecard p {
+      font-size: 14px;
+      color: #3A404C;
+      margin: 0 0 10px;
+      line-height: 1.55;
+    }
+
+    .ahead {
+      background: linear-gradient(170deg, #0A1636 0%, #001E60 100%);
+      border-radius: 18px;
+      padding: 34px 30px;
+      margin: 30px 0 6px;
+      color: #fff;
+    }
+
+    .ahead .tag {
+      color: #FF6a46;
+    }
+
+    .ahead h4 {
+      color: #fff;
+    }
+
+    .ahead p {
+      color: #D7DBEC;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--navy);
+      padding: 46px 28px;
+      text-align: center;
+    }
+
+    footer img {
+      width: 320px;
+      max-width: 78%;
+      height: auto;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 760px) {
+      .wrap {
+        padding: 0 20px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .factstrip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .imgrid,
+      .imgrid-3 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-inner {
+        padding: 0 20px 34px;
+      }
+
+      .racegrid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .statband {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      .imgrid,
+      .imgrid-3,
+      .imgrid-2 {
+        grid-template-columns: 1fr;
+      }
+
+      .shots.three {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .phones a,
+      .phones .pz,
+      .galitem {
+        width: 45%;
+        max-width: 45%;
+      }
+    }
+  
+    video.pvid{width:100%;display:block;cursor:pointer;background:#fff;aspect-ratio:440/744;object-fit:cover;}
+    .galitem.mock video.pvid{border-radius:0;}
+    .landscape video.pvid{aspect-ratio:16/9;}
+    .phones div.vid,.gal div.vid.galitem{text-decoration:none;color:inherit;}
+    .phones div.vid,.phones.lg div.vid{display:block;width:205px;max-width:30%;}
+</style>
+</head>
+<body>
+<!-- ================= HERO ================= -->
+<section class="hero">
+<video autoplay="" id="heroVid" loop="" playsinline="" poster="assets/img_1de8798b0ece.jpg" preload="auto">
+<source src="assets/vid_37fdef4e936f.mp4" type="video/mp4"/>
+</video>
+<div class="scrim"></div>
+<div class="classify">Public</div>
+<button aria-label="Toggle hero sound" class="soundbtn" id="soundBtn" type="button">
+<span id="soundTxt">Sound on</span>
+</button>
+<div class="hero-inner">
+<div class="max">
+<span class="kicker">F1 Update · Season to date</span>
+<h1>Turning the partnership<br/>into market results.</h1>
+<p class="sub">How Grooming activated the Audi Revolut F1® Team around the European run and the
+          consumption it drove.</p>
+</div>
+</div>
+</section>
+<script>
+    (function () {
+      var v = document.getElementById('heroVid'),
+        b = document.getElementById('soundBtn'),
+        t = document.getElementById('soundTxt');
+      if (!v || !b) return;
+      function setLabel() { t.textContent = v.muted ? 'Tap for sound' : 'Sound on'; }
+      v.muted = false;
+      var p = v.play();
+      if (p && p.then) {
+        p.then(setLabel).catch(function () { v.muted = true; v.play(); setLabel(); });
+      } else {
+        setLabel();
+      }
+      b.addEventListener('click', function () {
+        v.muted = !v.muted;
+        if (!v.muted) v.play();
+        setLabel();
+      });
+    })();
+  </script>
+<!-- ================= INTRO ================= -->
+<div class="wrap intro">
+<p class="greet">Grooming Leaders,</p>
+<p>The <strong>Audi Revolut F1 Team</strong> is scoring points consistently ([placeholder]) and
+      performing
+      better than established teams. Audi now has [placeholder] championship points and sits [placeholder] in the Constructors’
+      Championship — just behind Haas and ahead of Williams, Aston Martin and Cadillac. The team will be hoping to
+      build on this momentum with [placeholder] races left in the 2026 season.</p>
+</div>
+<!-- GROUP: Commercial impact -->
+<div class="wrap grouphead">
+<h2>Commercial impact</h2>
+</div>
+<!-- ================= MODEL 2 · CHINA ================= -->
+<div class="wrap model">
+<span class="tag">Greater China</span>
+<h3>F1 unlocks a step-change in customer sell-in</h3>
+<div class="result-line">Already sold <b>[placeholder]</b> of bespoke product — [placeholder] vs target.</div>
+<img alt="Gillette × Audi Revolut F1 co-branded limited-edition range for Greater China" class="wideimg" src="assets/img_6c8b9b9b80cd.jpg"/>
+<div class="factstrip">
+<div class="fact">
+<div class="n">[placeholder]</div>
+<div class="t">Positive JD reviews</div>
+</div>
+<div class="fact">
+<div class="n">[placeholder]</div>
+<div class="t">Top-KOL post views</div>
+</div>
+<div class="fact">
+<div class="n">[placeholder]</div>
+<div class="t">of offline [placeholder] business</div>
+</div>
+<div class="fact">
+<div class="n">[placeholder]</div>
+<div class="t">FY2627 aim</div>
+</div>
+</div>
+<p>F1 unlocked <strong>top-tier customer resource</strong> — JD, Tmall, Douyin and Sam's — and a co-branded design
+      (Audi Revolut livery, PIT-BOX set) driving genuine newness and demand.</p>
+<div class="imgrid-2 raw">
+<img alt="Gillette F1 race-tech in-store display in a Greater China retail banner" src="assets/img_60aadb7807ab.jpg"/>
+<img alt="Gillette F1 race-tech gondola display in a Greater China store" src="assets/img_76cfcede377e.jpg"/>
+</div>
+</div>
+<!-- ================= MODEL 3 · AMAZON ================= -->
+<div class="wrap model">
+<span class="tag">Amazon EU-5</span>
+<h3>Back-to-School promo that converted</h3>
+<div class="result-line"></div>
+<p>During Amazon Back-to-School
+      (20.08–02.09), we activated a Buy-to-Win campaign, providing consumers with the chance to win exclusive Audi
+      Revolut F1 prizes. In that period, total Grooming sales on Amazon’s five European markets reached <strong>[placeholder]
+        ([placeholder]
+        ) with volume at [placeholder].</strong></p>
+<div class="imgrid-2 raw">
+<img alt="Amazon Buy-to-Win co-branded creative" src="assets/img_e0089bd0ba74.jpg"/>
+<img alt="Amazon storefront How-to-Win page" src="assets/img_4d3016a2bf16.jpg"/>
+</div>
+</div>
+<!-- ASEAN -->
+<div class="wrap lite">
+<span class="tag">ASEAN · Phase 2</span>
+<h4>Phase 2 goes live across APAC</h4>
+<p>APAC has entered <strong>Phase 2</strong> — a 360 activation live in JAS26 across all five markets (Australia,
+      Thailand, Malaysia, Singapore, Philippines), behind growing displays
+      (AU [placeholder], MY/SG [placeholder]), powered by Gillette's APAC-first GenAI social toolkit. Momentum is already carrying
+      into <strong>Phase 3</strong>, with one of Australia's largest retailers naming the collaboration its
+      <strong>[placeholder] JFM'27 growth bet ([placeholder] NOS)</strong>.
+    </p>
+<div class="phones">
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_4c9a2bf76d42.jpg" preload="none"><source src="assets/vid_d2450b345cd4.mp4" type="video/mp4"/></video>
+<div class="pcap">GenAI social toolkit</div>
+</div>
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_c826a62a0a04.jpg" preload="none"><source src="assets/vid_d05ce2fb1213.mp4" type="video/mp4"/></video>
+<div class="pcap">Local-language adaptation</div>
+</div>
+</div>
+</div>
+<!-- GROUP: Race activation -->
+<div class="wrap grouphead">
+<h2>Race activation</h2>
+</div>
+<!-- ================= MODEL 1 · SPAIN ================= -->
+<div class="wrap model">
+<span class="tag">Spain · Madrid</span>
+<h3>Madrid: the fully integrated weekend</h3>
+<div class="result-line">GilletteLabs BODY became the <b>[placeholder] razor by units</b> at El Corte Inglés — <b>[placeholder] value
+        share</b>, [placeholder] volume share during the promo.</div>
+<p>Spain ran the partnership's most integrated weekend yet — social, experiential, TV, OOH and sampling all pulling
+      toward one launch. Three mega-influencers (DjMaRiiO, David Suárez, PabloGShow — [placeholder] combined)
+      were hosted in Paddock Club heroing <strong>GilletteLabs BODY</strong>, with six mid-influencers running a
+      'Total Body' routine. Together: <strong>[placeholder] · [placeholder] · [placeholder]</strong>, and 'Get Race Ready' content at
+      <strong>[placeholder]</strong>.
+    </p>
+<div class="phones lg">
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_13389b2a2798.jpg" preload="none"><source src="assets/vid_6268d207f8a0.mp4" type="video/mp4"/></video>
+<div class="pcap">Mega-influencer · GilletteLabs BODY</div>
+</div>
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_b422212b6d4e.jpg" preload="none"><source src="assets/vid_9255cd962b4c.mp4" type="video/mp4"/></video>
+<div class="pcap">'Get Race Ready'</div>
+</div>
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_d64daea99cb1.jpg" preload="none"><source src="assets/vid_e539ca0fa7c9.mp4" type="video/mp4"/></video>
+<div class="pcap">Gillette Antiperspirant</div>
+</div>
+</div>
+<p>On-site, Gillette hosted its own event — a <strong>barbershop, F1 simulator and slot racing</strong> — and
+      strengthened key customer relationships, hosting <strong>E.Leclerc</strong> and leading Spanish retailers
+      (El Corte Inglés, Carrefour, Druni, IFA, Amazon) around the GP.</p>
+<div class="imgrid-3">
+<img alt="Gillette barbershop at the Madrid event" src="assets/img_c92116063fa7.jpg"/>
+<img alt="Gillette Antiperspirant F1 simulator" src="assets/img_7aff46224470.jpg"/>
+<img alt="Gillette Antiperspirant slot-racing track" src="assets/img_faea17ab8e13.jpg"/>
+</div>
+<p>Via the ARF1 × Hyatt partnership, we sampled <strong>[placeholder] GilletteLabs BODY</strong> units at a World of Hyatt
+      consumer event.</p>
+<div class="imgrid-3">
+<img alt="Consumer receiving a GilletteLabs BODY razor at the World of Hyatt × Audi Revolut F1 activation" src="assets/img_6a2cb4bc55f1.jpg"/>
+<img alt="World of Hyatt × Audi Revolut F1 co-branded wall dispensing GilletteLabs BODY razors" src="assets/img_dc7c103404ca.jpg"/>
+<img alt="Consumer browsing the GilletteLabs BODY sampling display in Madrid" src="assets/img_16bce527d874.jpg"/>
+</div>
+<p>Beyond social, <strong>TV brand entertainment</strong> on <strong>Mediaset</strong> and <strong>DAZN</strong>
+      covered the full Madrid GP broadcast ([placeholder] men 18+), and the <strong>GilletteLabs BODY bus</strong> toured the
+      GP venue, impacting a further [placeholder] men 18+.</p>
+<div class="pair">
+<img alt="GilletteLabs BODY branding wrapped around the live F1 DAZN broadcast" src="assets/img_eed3379a2457.jpg"/>
+<img alt="GilletteLabs BODY bus touring the Madrid GP venue at Plaza de Castilla" src="assets/img_ac6b21b9f2f2.jpg"/>
+</div>
+</div>
+<!-- RACE: MONZA -->
+<div class="wrap lite">
+<span class="tag">Italy · Monza</span>
+<h4>Monza — [placeholder] creators, live event</h4>
+<p><strong>[placeholder] influencers</strong> produced <strong>[placeholder] assets</strong> for
+      <strong>[placeholder] impressions</strong> — outperforming usual posts ([placeholder]) by
+      capturing a live event.
+    </p>
+<div class="phones">
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_6e3888f0bd3b.jpg" preload="none"><source src="assets/vid_9ccb5ffc2e5d.mp4" type="video/mp4"/></video>
+<div class="pcap">@luca_campolunghi</div>
+</div>
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_67353a2e9c21.jpg" preload="none"><source src="assets/vid_7cde51beffc9.mp4" type="video/mp4"/></video>
+<div class="pcap">@giorgioramondetta</div>
+</div>
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_c5a7d1d18d11.jpg" preload="none"><source src="assets/vid_065f9f683caa.mp4" type="video/mp4"/></video>
+<div class="pcap">@giovanni_caslini · Braun</div>
+</div>
+</div>
+</div>
+<!-- RACE: BUDAPEST -->
+<div class="wrap lite">
+<span class="tag">Hungary · Budapest</span>
+<h4>Budapest — CE cluster &amp; Kai Pflaume</h4>
+<p><strong>[placeholder] Gillette pieces</strong>, [placeholder] impressions and [placeholder] interactions trackside — plus DACH's Tier-1
+      tie-up with <strong>Kai Pflaume</strong> driving <strong>[placeholder] views</strong> ([placeholder]).</p>
+<div class="phones" style="align-items:center;">
+<div class="pz"><img alt="Kai Pflaume Budapest Story — Get Race Ready with Gillette" src="assets/img_170348bf3faf.jpg"/></div>
+<div class="pz" style="width:300px;max-width:62%;"><img alt="Guests hosted by Hülkenberg's #27 car in the Budapest garage" src="assets/img_cdf21683d3ca.jpg" style="border-radius:12px;"/></div>
+</div>
+</div>
+<!-- GROUP: Social-first brand building -->
+<div class="wrap grouphead">
+<h2>Social-first brand building</h2>
+</div>
+<!-- SOCIAL FIRST: BRAUN -->
+<div class="wrap lite">
+<span class="tag">Social-first brand building</span>
+<h4>Braun Legendary Challenge</h4>
+<p>Braun brought its <strong>'Legendary by Design'</strong> platform to life with
+      <strong>Nico Hülkenberg</strong> — a social-first content series on @audif1 putting Braun's shavers (and an Audi
+      R8) to the test around the partnership.
+    </p>
+<div class="phones">
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_8b213a18153d.jpg" preload="none"><source src="assets/vid_7e235ac6be6d.mp4" type="video/mp4"/></video>
+<div class="pcap">'Legendary by Design' · the test</div>
+</div>
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_56c2d1339aff.jpg" preload="none"><source src="assets/vid_1d5545b2d6cf.mp4" type="video/mp4"/></video>
+<div class="pcap">Nico × Braun</div>
+</div>
+</div>
+</div>
+<!-- GROUP: H1 summary -->
+<div class="wrap grouphead">
+<h2>H1 summary</h2>
+</div>
+<!-- MEDIA EXPOSURE VALUE / NIELSEN -->
+<div class="wrap lite">
+<span class="tag">Media exposure value</span>
+<h4>What the partnership is delivering</h4>
+<p>Independently measured in Audi's <strong>Nielsen report</strong> (season's first [placeholder] races), the
+      partnership is putting Gillette in front of F1's <strong>Gen-Z audience of the future</strong>.</p>
+<div class="statband">
+<div class="s">
+<div class="n">[placeholder]</div>
+<div class="t">Total media value</div>
+</div>
+<div class="s">
+<div class="n">[placeholder]</div>
+<div class="t">Impressions</div>
+</div>
+<div class="s">
+<div class="n">[placeholder]</div>
+<div class="t">Social followers</div>
+</div>
+</div>
+<div class="gal">
+<div class="galitem mock vid">
+<video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_de99d830b89d.jpg" preload="none"><source src="assets/vid_e3cbd26e4e48.mp4" type="video/mp4"/></video>
+</div>
+<div class="galitem mock vid">
+<video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_55e4112bcc3c.jpg" preload="none"><source src="assets/vid_fb712faeb0d4.mp4" type="video/mp4"/></video>
+</div>
+<div class="galitem mock vid">
+<video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_205597866658.jpg" preload="none"><source src="assets/vid_9dd0d3747447.mp4" type="video/mp4"/></video>
+</div>
+<div class="galitem mock vid">
+<video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_e02927227796.jpg" preload="none"><source src="assets/vid_37fdef4e936f.mp4" type="video/mp4"/></video>
+</div>
+<div class="galitem mock vid">
+<video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_ac206977bfc8.jpg" preload="none"><source src="assets/vid_e3d336221e31.mp4" type="video/mp4"/></video>
+</div>
+<div class="galitem mock">
+<img alt="@audif1 — Gillette on the halo, 'Hülk on Point'" src="assets/img_64165766437c.jpg"/>
+</div>
+<div class="galitem mock">
+<img alt="@audif1 — Gillette on the race-suit collar, Dutch GP" src="assets/img_82712986395f.jpg"/>
+</div>
+<div class="galitem mock">
+<img alt="@audif1 — Gillette on the collar, Hülkenberg birthday post" src="assets/img_a0bc6d510b02.jpg"/>
+</div>
+<div class="galitem mock">
+<img alt="@audif1 — Gillette on Bortoleto's race-suit collar" src="assets/img_d0f254a71265.jpg"/>
+</div>
+<div class="galitem mock">
+<img alt="@audif1 — Gillette on the collar, Hungarian GP" src="assets/img_ccc227f10a83.jpg"/>
+</div>
+<div class="galitem mock">
+<img alt="@audif1 — Gillette on the halo" src="assets/img_1b9bf208d830.jpg"/>
+</div>
+<div class="galitem mock vid">
+<video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_b7c015c974c5.jpg" preload="none"><source src="assets/vid_d35726f2c2f8.mp4" type="video/mp4"/></video>
+</div>
+</div>
+<p style="font-size:13px;color:var(--muted);margin-top:14px;text-align:center;">Gillette logo placements across
+      car and collar.</p>
+</div>
+<!-- ORGANIC & CREATOR SOCIAL -->
+<div class="wrap lite">
+<span class="tag">Organic &amp; creator social</span>
+<h4>Our media reporting, season to date</h4>
+<p>Across the race weekends, our guest creators posted <strong>[placeholder] branded pieces</strong>
+      ([placeholder] creators) for a further <strong>[placeholder] views</strong>.</p>
+<div class="phones">
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_08dba1329c68.jpg" preload="none"><source src="assets/vid_06b75d8393d7.mp4" type="video/mp4"/></video>
+<div class="pcap">Guest creator content</div>
+</div>
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_b1f5d13185f8.jpg" preload="none"><source src="assets/vid_6ebef20adada.mp4" type="video/mp4"/></video>
+<div class="pcap">Hungary · [placeholder] views</div>
+</div>
+<div class="vid"><video class="pvid" onclick="pv(this)" playsinline="" poster="assets/img_e1d6cf16e505.jpg" preload="none"><source src="assets/vid_2c5e4253bfd1.mp4" type="video/mp4"/></video>
+<div class="pcap">Hungary · [placeholder] views</div>
+</div>
+</div>
+</div>
+<!-- SIGN-OFF -->
+<div class="wrap" style="padding:30px 0 8px;">
+<p style="font-size:16px;color:#2B2F3A;margin:0;">Thanks,<br/>James (on behalf of F1 Partnership Team)</p>
+</div>
+<!-- ================= FOOTER ================= -->
+<footer>
+<img alt="Gillette | Audi Revolut F1 Team — Official Shaving Partner" src="assets/img_8d589bd43a7e.png"/>
+</footer>
+<script>function pv(v){v.controls=true;v.onclick=null;document.querySelectorAll('video.pvid').forEach(function(o){if(o!==v)o.pause();});var p=v.play();if(p&&p.catch)p.catch(function(){});}</script></body>
+</html>
